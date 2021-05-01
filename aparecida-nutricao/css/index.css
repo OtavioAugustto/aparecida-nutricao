@@ -142,3 +142,17 @@ button[disabled=disabled], button:disabled {
 	font-weight: bolder;
 }
 
+.fadeOut{
+	opacity: 0;
+	transition:  0.5s;
+}
+
+#filtro{
+	width: 200px;
+	height: 35px;
+	margin-bottom: 15px;
+}
+.hide {
+	display: none;
+}
+
