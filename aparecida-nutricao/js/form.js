@@ -1,18 +1,11 @@
 var btnAdd = document.querySelector("#adicionar-paciente");
 
 btnAdd.addEventListener("click", function(event){
-    event.preventDefault(); // evita que o comportamento padrão do evento seja ativado (não recarrega página)
-    
+    event.preventDefault(); // evita que o comportamento padrão do evento seja ativado (não recarrega página)    
     
     var form = document.querySelector("#form-adiciona");
-
     //capturando os dados do formulário e de seus inputs
     var paciente = captureFormInfo(form);
-    
-
-    //criando elementos HTML para a tabela
-    var pacienteTr = createTr(paciente);
-    
     //validação dos dados de paciente
     var erros = validaPaciente(paciente);
     
@@ -23,12 +16,8 @@ btnAdd.addEventListener("click", function(event){
         
     }
 
-
-
-    // inserindo os dados do TR na tabela
-    var tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
-    
+    AddPctOnTable(paciente);
+   
     form.reset();
     
     //limpando as msgs de erro após concluir inserção
@@ -36,6 +25,15 @@ btnAdd.addEventListener("click", function(event){
     msgErro.innerHTML ="";
 
 });
+
+function AddPctOnTable(paciente){
+        //criando elementos HTML para a tabela
+        var pacienteTr = createTr(paciente);
+         // inserindo os dados do TR na tabela
+        var tabela = document.querySelector("#tabela-pacientes");
+        tabela.appendChild(pacienteTr);
+
+};
 
 function captureFormInfo(form){
     //Objeto paciente

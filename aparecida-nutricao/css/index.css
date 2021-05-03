@@ -137,6 +137,7 @@ button[disabled=disabled], button:disabled {
 	background-color: lightcoral;
 }
 
+/* id do array de msgs para a ul*/
 #msgs-erro{
 	color: red;
 	font-weight: bolder;
@@ -155,4 +156,13 @@ button[disabled=disabled], button:disabled {
 .hide {
 	display: none;
 }
+
+/* msgs de erro aleatórias*/
+.erro {
+	color: red;
+	font-weight: bolder;	
+}
+
+
+
 
